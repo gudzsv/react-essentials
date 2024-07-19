@@ -32,35 +32,6 @@ main h2 {
 	color: #a18aba;
 }
 
-#core-concepts ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
-	gap: 2rem;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-#core-concepts li {
-	width: 10rem;
-	text-align: center;
-}
-
-#core-concepts li img {
-	height: 4rem;
-	width: 6rem;
-	object-fit: cover;
-}
-
-#core-concepts li h3 {
-	margin: 0.5rem 0;
-}
-
-#core-concepts li p {
-	font-size: 0.9rem;
-}
-
 #examples {
 	margin: 3rem auto;
 }
