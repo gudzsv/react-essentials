@@ -1,17 +1,14 @@
+import { useState } from 'react';
 import CoreConcept from './components/CoreConcept/CoreConcept.jsx';
 import Header from './components/Header/Header.jsx';
 import TabButton from './components/TabButton/TabButton.jsx';
 import { CORE_CONCEPTS } from './data.js';
 
 function App() {
-	function handleClick(selectedButton) {
-		switch (selectedButton) {
-			case 'components':
-				break;
-				case 'jsx':
-					break;
-					case''
-		}
+	const [selectedTopic, setSelectedTopic] = useState('Please click a button');
+
+	function handleSelected(selectedButton) {
+		setSelectedTopic(selectedButton);
 	}
 	return (
 		<div>
@@ -32,13 +29,18 @@ function App() {
 				<section id='examples'>
 					<h2>Examples</h2>
 					<menu>
-						<TabButton onSelect={() => handleClick('component')}>
+						<TabButton onSelect={() => handleSelected('component')}>
 							Component
 						</TabButton>
-						<TabButton onSelect={() => handleClick('jsx')}>JSX</TabButton>
-						<TabButton onSelect={() => handleClick('props')}>Props</TabButton>
-						<TabButton onSelect={() => handleClick('state')}>State</TabButton>
+						<TabButton onSelect={() => handleSelected('jsx')}>JSX</TabButton>
+						<TabButton onSelect={() => handleSelected('props')}>
+							Props
+						</TabButton>
+						<TabButton onSelect={() => handleSelected('state')}>
+							State
+						</TabButton>
 					</menu>
+					{selectedTopic}
 				</section>
 			</main>
 		</div>
